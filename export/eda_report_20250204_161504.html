@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>EDA Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1, h2 { color: #333; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #f2f2f2; }
+        .log { background-color: #f9f9f9; padding: 10px; border: 1px solid #ddd; }
+        .log ul { list-style-type: none; padding-left: 0; }
+        .log li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <h1>EDA Report</h1>
+    
+    <h2>Data Summary</h2>
+    <table border="1" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>num_preg</th>
+      <th>plasma_glucose_conc</th>
+      <th>bp</th>
+      <th>tricepsthickness</th>
+      <th>insulin</th>
+      <th>BMI</th>
+      <th>pedigree_func</th>
+      <th>age</th>
+      <th>target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>768.000000</td>
+      <td>768.000000</td>
+      <td>768.000000</td>
+      <td>768.000000</td>
+      <td>768.000000</td>
+      <td>768.000000</td>
+      <td>768.000000</td>
+      <td>768.000000</td>
+      <td>768</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>tested_negative</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>3.845052</td>
+      <td>120.894531</td>
+      <td>69.105469</td>
+      <td>20.536458</td>
+      <td>79.799479</td>
+      <td>31.992578</td>
+      <td>0.471876</td>
+      <td>33.240885</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>3.369578</td>
+      <td>31.972618</td>
+      <td>19.355807</td>
+      <td>15.952218</td>
+      <td>115.244002</td>
+      <td>7.884160</td>
+      <td>0.331329</td>
+      <td>11.760232</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.078000</td>
+      <td>21.000000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>1.000000</td>
+      <td>99.000000</td>
+      <td>62.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>27.300000</td>
+      <td>0.243750</td>
+      <td>24.000000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>3.000000</td>
+      <td>117.000000</td>
+      <td>72.000000</td>
+      <td>23.000000</td>
+      <td>30.500000</td>
+      <td>32.000000</td>
+      <td>0.372500</td>
+      <td>29.000000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>6.000000</td>
+      <td>140.250000</td>
+      <td>80.000000</td>
+      <td>32.000000</td>
+      <td>127.250000</td>
+      <td>36.600000</td>
+      <td>0.626250</td>
+      <td>41.000000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>17.000000</td>
+      <td>199.000000</td>
+      <td>122.000000</td>
+      <td>99.000000</td>
+      <td>846.000000</td>
+      <td>67.100000</td>
+      <td>2.420000</td>
+      <td>81.000000</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+    
+    <h2>Transformation Log</h2>
+    <div class="log">
+        
+            <ul>
+            
+                <li>df.drop_duplicates(inplace=True)  # Dropped duplicates. Shape from (768, 9) to (768, 9)</li>
+            
+            </ul>
+        
+    </div>
+</body>
+</html>

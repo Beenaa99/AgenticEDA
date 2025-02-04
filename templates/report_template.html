@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1, h2 { color: #333; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #f2f2f2; }
+        .log { background-color: #f9f9f9; padding: 10px; border: 1px solid #ddd; }
+        .log ul { list-style-type: none; padding-left: 0; }
+        .log li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    
+    <h2>Data Summary</h2>
+    {{ summary | safe }}
+    
+    <h2>Transformation Log</h2>
+    <div class="log">
+        {% if transformation_log %}
+            <ul>
+            {% for log in transformation_log %}
+                <li>{{ log }}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No transformations applied.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
